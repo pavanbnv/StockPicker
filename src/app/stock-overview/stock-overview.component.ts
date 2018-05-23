@@ -7,16 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StockOverviewComponent implements OnInit {
 
-  faveStocks=[];
-  selectedNum=0;
+  faveStocks = [];
+  selectedNum = 0;
   constructor() { }
 
   ngOnInit() {
   }
 
-  getFaveStocks(){
+
+  getFaveStocks() {
     return JSON.stringify(this.faveStocks);
   }
+
 
   @Input('addedStock')
   set addedStock(selectedStock: any) {
@@ -30,9 +32,5 @@ export class StockOverviewComponent implements OnInit {
       }
     }
   }
-
-  
-
-
 
 }

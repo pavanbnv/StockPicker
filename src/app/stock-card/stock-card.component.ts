@@ -18,7 +18,7 @@ export class StockCardComponent implements OnInit {
 
     get imgUrl(): string { return this.imageUrl; }
 
-  @Output() addedToList = new EventEmitter<any>();
+  @Output() addToList = new EventEmitter<any>();
 
   background_color = 'white';
   selected: boolean = false;
@@ -34,6 +34,6 @@ export class StockCardComponent implements OnInit {
     this.background_color = this.selected ? 'lightgreen' : 'white';
     console.log('this.title : ' + this.title );
     this.buttonLabel = this.selected ? 'Remove Bet' : 'Bet';
-    this.addedToList.emit({title: this.title, selected: this.selected});
+    this.addToList.emit({title: this.title, selected: this.selected});
   }
 }
